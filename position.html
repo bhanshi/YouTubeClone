@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position Practice</title>
+  </head>
+  <body style="
+  height:3000px;
+  padding-top: 60px;
+  padding-left:80px">
+    <div style="
+     background-color:black;
+     color:white;
+     position:fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     height:50px; 
+     z-index: 1;">
+      header</div>
+
+      <div style="
+      background-color: green;
+      color:white;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      top: 50px;
+      width: 72px;
+      ">
+        sidebar
+
+      <div style="
+      position: absolute;
+      background-color:red;
+      color:white;
+      top: 0;
+      right: 0; 
+      ">
+      X <!--here 'X' is 0px far from the right of sidebar and 0px far from the top of sidebar and not from the top or right  of the page-->
+       <!--when "position:absolute" element is inside "position:fixed" element--> 
+      </div>
+      </div>
+
+      <div style="
+      position: absolute;
+      background-color:red;
+      color:white;
+      top: 60px;
+      right: 10px;
+      ">
+      absolute <!--(with default z-index i.e. 0)-->
+      </div>
+
+      
+      <div style="
+      position: absolute;
+      background-color:red;
+      color:white;
+      top: 90px;
+      right: 10px;
+      z-index: 2;
+      ">
+      absolute  <!--(with z-index=2 which is greater than z-index of header which is 1)-->
+      </div>
+
+
+    <div style="
+      background-color: lightblue;
+      height:200px;
+      width:200px;
+      position:static;">
+      div 1
+    </div>
+      
+    <div style="
+    background-color: lightpink;
+    height:200px;
+    width:200px;
+    position: relative;
+    ">
+       div 2
+    <div style="
+    position: absolute;
+    background-color: black;
+    color:white;
+    bottom: 10px;
+    right: 10px;
+    ">
+    5:00 <!--when "position:absolute" element is inside "position:relative" element-->
+    </div>
+    </div>
+  </body>
+</html>
